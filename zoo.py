@@ -22,11 +22,14 @@ while select != 0:
         if select == 1:
             name = input("Name of the animal: ")
             placeanimal(zoo, name)
-            
-                #else: 
-                #    animal[name] = 1
-                #    zoo.append(animal)
-                #    animal = {}
+        elif select == 2:
+            removeName = input("What to delete? ")
+            for a in zoo:
+                if name in a.keys():
+                    if a[name] > 0: #kys = True
+                        a[name] -=1
+                    else:
+                        del a[name]
 
-print(zoo)         
+print(zoo)
 print("Vége a játéknak.")   
